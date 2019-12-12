@@ -38,7 +38,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
                 @ComponentScan.Filter(VirtualURIMapper.class),
                 @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = VirtualURIMapping.class)
         })
-@Import({JspRenderingConfiguration.class, SiteAwareFreemarkerRenderingConfiguration.class})
+@Import(SiteAwareFreemarkerRenderingConfiguration.class)
 public class BlossomServletConfiguration {
 
     /**

@@ -53,57 +53,6 @@
     <property name="order" value="1" />
   </bean>
 
-  <!-- JSP - renders all views that end with .jsp -->
-  <bean class="info.magnolia.module.blossom.view.TemplateViewResolver">
-    <property name="order" value="2"/>
-    <property name="prefix" value="/cart-blossom/templates/"/>
-    <property name="viewNames" value="*.jsp"/>
-    <property name="viewRenderer">
-      <bean class="info.magnolia.module.blossom.view.JspTemplateViewRenderer">
-        <entry key="imgfn">
-          <bean class="info.magnolia.rendering.renderer.ContextAttributeConfiguration">
-            <property name="name" value="imgfn"/>
-            <property name="componentClass" value="info.magnolia.imaging.functions.ImagingTemplatingFunctions"/>
-          </bean>
-        </entry>
-        <entry key="sitefn">
-          <bean class="info.magnolia.rendering.renderer.ContextAttributeConfiguration">
-            <property name="name" value="sitefn"/>
-            <property name="componentClass" value="info.magnolia.module.site.functions.SiteFunctions"/>
-          </bean>
-        </entry>
-        <!--
-          Uncomment these if you're using DAM, MTE, Categorization or the REST module.
-
-        <entry key="damfn">
-          <bean class="info.magnolia.rendering.renderer.ContextAttributeConfiguration">
-            <property name="name" value="damfn"/>
-            <property name="componentClass" value="info.magnolia.dam.asset.functions.DamTemplatingFunctions"/>
-          </bean>
-        </entry>
-        <entry key="searchfn">
-          <bean class="info.magnolia.rendering.renderer.ContextAttributeConfiguration">
-            <property name="name" value="searchfn"/>
-            <property name="componentClass" value="info.magnolia.templating.functions.SearchTemplatingFunctions"/>
-          </bean>
-        </entry>
-        <entry key="catfn">
-          <bean class="info.magnolia.rendering.renderer.ContextAttributeConfiguration">
-            <property name="name" value="catfn"/>
-            <property name="componentClass" value="info.magnolia.module.categorization.functions.CategorizationTemplatingFunctions"/>
-          </bean>
-        </entry>
-        <entry key="restfn">
-          <bean class="info.magnolia.rendering.renderer.ContextAttributeConfiguration">
-            <property name="name" value="restfn"/>
-            <property name="componentClass" value="info.magnolia.resteasy.client.functions.RestTemplatingFunctions"/>
-          </bean>
-        </entry>
-        -->
-      </bean>
-    </property>
-  </bean>
-
   <!-- Freemarker - renders all views that end with .ftl -->
   <bean class="info.magnolia.module.blossom.view.TemplateViewResolver">
     <property name="order" value="3"/>
