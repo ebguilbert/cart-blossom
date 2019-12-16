@@ -58,7 +58,7 @@ public class FreemarkerRenderingConfiguration {
     public TemplateViewResolver freemarkerTemplateViewResolver(FreemarkerTemplateViewRenderer viewRenderer) {
         TemplateViewResolver resolver = new TemplateViewResolver();
         resolver.setOrder(3);
-        resolver.setPrefix("/blossomSampleModule/");
+        resolver.setPrefix("/cart-blossom/");
         resolver.setViewNames("*.ftl");
         resolver.setViewRenderer(viewRenderer);
         return resolver;
