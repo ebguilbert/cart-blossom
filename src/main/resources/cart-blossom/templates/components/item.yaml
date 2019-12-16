@@ -1,0 +1,4 @@
+title: Cart Item Tester
+renderType: freemarker
+templateScript: /cart-blossom/templates/components/item.ftl
+dialog: cart-blossom:components/item

@@ -1,0 +1,32 @@
+form:
+  label: Item Tester
+  tabs:
+    - name: tabMain
+      label: Main
+      fields:
+
+        - name: cartId
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Cart ID
+          
+        - name: cartItem
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Item Title          
+
+        - name: targetPage
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          label: Page
+          description: Choose a page to link to.
+          required: true
+          appName: pages
+          targetWorkspace: website
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+
+actions:
+  commit:
+    label: save changes
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    label: cancel
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

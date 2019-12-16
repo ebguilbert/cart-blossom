@@ -1,4 +1,7 @@
 <div>
+    <h3>
+    ID: ${content.@id}
+    </h3>
     <h4>
     ${content.title!CART}
     [#if content.size?has_content && content.size]
