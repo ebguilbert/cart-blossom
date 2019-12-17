@@ -1,7 +1,9 @@
 <div>
+[#if cmsfn.editMode]
     <h3>
-    ID: ${content.@id}
+    CART ID for requests: ${content.@id}
     </h3>
+[/#if]    
     <h4>
     ${content.title!CART}
     [#if content.size?has_content && content.size]
