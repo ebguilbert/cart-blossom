@@ -30,7 +30,7 @@ areas:
 
 ## Magnolia 6
 
-Blossom 3.3+ is compatible with Magnolia 6. 
+Blossom 3.3+ is compatible with Magnolia 6.
 
 The module is fully compatible with Magnolia 6 and can be used as a base for your own blossom modules on latest versions of Magnolia.
 
@@ -40,7 +40,7 @@ In order to use blossom with DX Core a personalization compatibility module has 
 ```
   	<dependency>
   		<groupId>info.magnolia.personalization</groupId>
-  		<artifactId>magnolia-personalization-blossom</artifactId>
+  		<artifactId>magnolia-personalization-blossom-compatibility</artifactId>
   		<version>latest_version</version>
 	</dependency> 
 ```
