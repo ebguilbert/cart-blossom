@@ -12,9 +12,9 @@
   -->
   <properties>
     <javaVersion>1.8</javaVersion>
-    <magnoliaBundleVersion>6.1.3</magnoliaBundleVersion>
+    <magnoliaBundleVersion>6.2.6</magnoliaBundleVersion>
     <springVersion>5.1.9.RELEASE</springVersion>
-    <blossomVersion>3.3</blossomVersion>
+    <blossomVersion>3.4.4</blossomVersion>
   </properties>
 
   <dependencyManagement>

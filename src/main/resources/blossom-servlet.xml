@@ -59,7 +59,7 @@
     <property name="prefix" value="/cart-blossom/"/>
     <property name="viewNames" value="*.ftl"/>
     <property name="viewRenderer">
-      <bean class="info.magnolia.module.blossom.view.FreemarkerTemplateViewRenderer">
+      <bean class="info.magnolia.module.blossom.view.SiteAwareFreemarkerTemplateViewRendererFactoryBean">
         <property name="contextAttributes">
           <map>
             <entry key="cms">
@@ -86,6 +86,12 @@
                 <property name="componentClass" value="info.magnolia.module.site.functions.SiteFunctions"/>
               </bean>
             </entry>
+            <entry key="searchfn">
+              <bean class="info.magnolia.rendering.renderer.ContextAttributeConfiguration">
+                <property name="name" value="searchfn"/>
+                <property name="componentClass" value="info.magnolia.templating.functions.SearchTemplatingFunctions"/>
+              </bean>
+            </entry>            
             <!--
               Uncomment these if you're using DAM, MTE, Categorization or the REST module.
 
@@ -93,12 +99,6 @@
               <bean class="info.magnolia.rendering.renderer.ContextAttributeConfiguration">
                 <property name="name" value="damfn"/>
                 <property name="componentClass" value="info.magnolia.dam.asset.functions.DamTemplatingFunctions"/>
-              </bean>
-            </entry>
-            <entry key="searchfn">
-              <bean class="info.magnolia.rendering.renderer.ContextAttributeConfiguration">
-                <property name="name" value="searchfn"/>
-                <property name="componentClass" value="info.magnolia.templating.functions.SearchTemplatingFunctions"/>
               </bean>
             </entry>
             <entry key="catfn">
